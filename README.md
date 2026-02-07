@@ -1,3 +1,5 @@
+![Infrastructure & Deployment Notes](infra-deployment-notes-banner-1200x630.png)
+
 # Infrastructure & Deployment Notes
 
 This repository contains selected notes, patterns, and small utilities derived from
