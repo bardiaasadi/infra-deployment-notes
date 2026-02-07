@@ -143,7 +143,7 @@ Reviewers must reason about identity via **ADO settings**, not just pipeline YAM
 
 ---
 
-## Minimal examples (to make the difference obvious)
+## Minimal examples
 
 ### AKS: identity is explicit in the workload spec
 
