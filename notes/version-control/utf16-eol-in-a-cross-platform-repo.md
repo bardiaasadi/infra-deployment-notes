@@ -81,15 +81,3 @@ A practical policy:
 * either convert them to a more Git-friendly encoding, or
 * add explicit `.gitattributes` entries and recommit under correct rules
 
-## Why this is a “core engineering” story
-
-Most teams never hit this problem because they don’t have:
-
-* cross-platform dev in one repo
-* UTF-16 resource/config files in active use
-* strict build expectations that break on subtle EOL/encoding differences
-
-When you do hit it, it’s a perfect example of platform engineering:
-
-> reducing a class of failures by making the system explicit instead of relying on defaults.
-
