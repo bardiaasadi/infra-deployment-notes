@@ -1,5 +1,4 @@
 
-````md
 # Detecting Azure Configuration Drift with Bicep + `az deployment group what-if`
 
 ## Problem
