@@ -92,13 +92,3 @@ If I were doing this again (or continuing optimization), I would:
 
 * move large artifacts to a dedicated storage strategy (e.g., **Git LFS**)
 * keep the main repo lean and fast for day-to-day dev workflows
-
-## Why this belongs on my “core projects” list
-
-This migration exercised the full stack of platform engineering skills:
-
-* source control and history mechanics
-* risk management and validation
-* cross-platform workflow correctness
-* change management across people and tooling
-* operational planning for staged cutover
