@@ -103,7 +103,7 @@ Reviewers must reason about identity via **ADO settings**, not just pipeline YAM
 
 ---
 
-## The clean distinction (the sentence you can say verbatim)
+## The clean distinction
 
 > **AKS:** The workload’s identity is declared in Kubernetes (namespace + serviceAccount), and Azure validates that exact `sub` from the cluster issuer.  
 > **ADO:** The workload’s identity is declared by Azure DevOps (service connection + pipeline context), and Azure validates whatever `sub` ADO asserts — YAML mostly selects the service connection, it doesn’t define identity claims.
