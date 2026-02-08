@@ -1,5 +1,3 @@
-![Infrastructure & Deployment Notes](GithubReadmeBanner.png)
-
 # Infrastructure & Deployment Notes
 
 This repository contains selected notes, patterns, and small utilities derived from
