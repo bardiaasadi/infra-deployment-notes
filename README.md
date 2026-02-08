@@ -1,4 +1,4 @@
-![Infrastructure & Deployment Notes](MyLinkedinBanner.png)
+![Infrastructure & Deployment Notes](GithubReadmeBanner.png)
 
 # Infrastructure & Deployment Notes
 
