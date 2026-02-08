@@ -1,4 +1,4 @@
-![Infrastructure & Deployment Notes](infra-deployment-notes-banner-1200x630.png)
+![Infrastructure & Deployment Notes](MyLinkedinBanner.png)
 
 # Infrastructure & Deployment Notes
 
