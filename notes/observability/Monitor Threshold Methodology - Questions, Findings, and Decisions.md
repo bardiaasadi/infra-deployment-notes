@@ -810,16 +810,16 @@ The candidate `max(2 × p95 daily degraded minutes, 60 minutes)` formula is reta
 **Why it matters**
 Future work can understand what was tested without mistaking a superseded candidate for a current requirement.
 
-## 7.8 [OPEN] What should future drift control look like?
+## 7.8 [DECIDED; IMPLEMENTATION OPEN] What should future drift control look like?
 
 **Question / assumption**
 A static Datadog threshold can provide meaningful long-term drift detection without maintenance.
 
 **Finding**
-Real drift control needs a moving comparison population, periodic recalculation, and protection against predictable seasonal transitions such as returning to PEAK. That may be better expressed as scheduled analysis rather than an always-on static monitor.
+Real drift control needs a moving comparison population, periodic recalculation, and protection against predictable seasonal transitions such as returning to PEAK. This is better expressed as scheduled analysis rather than an always-on static monitor.
 
 **Decision**
-Defer the design. A possible future path is a CI/CD or scheduled pipeline that recalculates degradation-bucket distributions, compares recent periods with an appropriate moving or seasonal baseline, and proposes or validates changes under review.
+Do not create an always-on Datadog drift or anomaly monitor. The intended control is a monthly rerun of the full analysis, probably through a scheduled CI/CD pipeline. The pipeline design and operational workflow remain future work.
 
 **Why it matters**
 This preserves the original goal—detecting where the service is heading—without forcing it into the wrong monitoring primitive.
@@ -1540,7 +1540,7 @@ This methodology intentionally excludes MTTA, acknowledgement latency, unresolve
 
 ## 13.9 [OPEN] How should fleet drift control be implemented?
 
-Monitor B is deferred. A future scheduled or CI/CD mechanism may compare recent degradation-bucket behavior with moving and seasonal baselines, but its cadence, reference population, change controls, and operational response remain undesigned.
+Monitor B is deferred, and no other always-on drift or anomaly monitor is planned. The intended control is a monthly rerun of the full analysis, probably through scheduled CI/CD. The exact implementation, reference population, change controls, and operational response remain undesigned.
 
 ---
 
@@ -1661,7 +1661,7 @@ The raw C crossings may be correct evidence of recurring severe latency, but the
 ## 17.3 Final first-round monitor-set decision
 
 **Decision**
-The active methodology is Monitor A + Monitor C only. Populist error rate is methodologically settled pending a mechanical rerun under the current 1% error-rate T1 floor. Populist latency remains investigation-blocked. Monitor B is deferred fleet-wide; future drift control may be implemented through scheduled analysis or CI/CD rather than a static Datadog monitor.
+The active methodology is Monitor A + Monitor C only. Populist error rate is methodologically settled pending a mechanical rerun under the current 1% error-rate T1 floor. Populist latency remains investigation-blocked. Monitor B is deferred fleet-wide; drift control is intended to come from monthly full-analysis reruns, probably scheduled through CI/CD, rather than an always-on Datadog drift or anomaly monitor. Implementation remains future work.
 
 ## 17.4 What did the follow-up Populist latency characterization reveal?
 
